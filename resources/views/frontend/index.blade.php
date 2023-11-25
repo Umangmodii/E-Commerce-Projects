@@ -272,7 +272,8 @@
                     <div class="content col">
                         {{-- <p><a href="{{$data->cat_info['title']}}"</a></p> --}}
                         {{-- <h2><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h2> --}}
-                        <h3>{{$data->title}} <br>Up to<span> {{$data->discount}}%</span></h3>
+                        
+                        <h4>{{$data->title}} <br><br>Up to<span> {{$data->discount}}%</span></h4>
                         <br>
                         <button class="btn btn-primary"> <a href="{{route('product-detail',$data->slug)}}"> Shop Now </a></button>
                     </div>
@@ -460,7 +461,7 @@
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-tag"></i>
-                    <h4>Best Peice</h4>
+                    <h4>Best Price</h4>
                     <p>Guaranteed price</p>
                 </div>
                 <!-- End Single Service -->
@@ -592,9 +593,9 @@
                                                 <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
                                             </div>
                                         </form>
-                                        <div class="default-social">
-                                        <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
-                                        </div>
+                                        {{-- <div class="default-social"> --}}
+                                        {{-- <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END --> --}}
+                                        {{-- </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -608,8 +609,7 @@
 @endsection
 
 @push('styles')
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2e5abf393162001291e431&product=inline-share-buttons' async='async'></script>
+
     <style>
         /* Banner Sliding */
         #Gslider .carousel-inner {
@@ -618,10 +618,12 @@
         }
 
         #Gslider .carousel-inner{
-        height: 550px;
+       
         }
         #Gslider .carousel-inner img{
             width: 100% !important;
+            height: 50% 
+
             opacity: .8;
         }
 
