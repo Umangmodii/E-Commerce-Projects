@@ -20,6 +20,308 @@
         </div>
     </div>
     <!-- End Breadcrumbs -->
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+
+       
+  
+            
+          
+      <div class="p-2 mb-10 bg-dark text-white w-100 vh-50 p-3"><h5><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-2-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm4.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306Z"/>
+      </svg> Checkout Details  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+      </svg>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-3-square-fill" viewBox="0 0 16 16">
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318Z"/>
+      </svg> Shipping <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-4-square-fill" viewBox="0 0 16 16">
+        <path d="M6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218Z"/>
+        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm5.519 5.057c.22-.352.439-.703.657-1.055h1.933v5.332h1.008v1.107H10.11V12H8.85v-1.559H4.978V9.322c.77-1.427 1.656-2.847 2.542-4.265Z"/>
+      </svg> Payment  </h5>
+        <br>
+
+        <center>
+  
+        <div class="mainWrapper">
+          <div class="statusBar">
+            <span class="pBar"></span>
+            <div class="node n0 done nConfirm0">
+              <div class="main done m0 done nConfirm0">1</div>
+              
+              <span class="text t0 done nConfirm0"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</span>
+            </div>
+
+            <div class="node n0 done nConfirm0">
+              <div class="main m0 done nConfirm0">2</div>
+              <span class="text t0 done  nConfirm0" aria-hidden="true"> <i class="fa fa-user"></i>Details</span>
+            </div>
+
+            <div class="node n2 done nConfirm2">
+              <div class="main m2 done nConfirm2">3</div>
+              <span class="text t2 done  nConfirm2" aria-hidden="true"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg></i>Shipping</span>
+            </div>
+            <div class="node n3 done nConfirm3">
+              <div class="main m3 done nConfirm3">4</div>
+              <span class="text t3 done nConfirm3" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+              </svg> Payment</span>
+            </div>
+            <div class="node n4 nConfirm4">
+              <div class="main m4 nConfirm4"></div>
+              <span class="text t4 nConfirm4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+              </svg> Review </span>
+            </div>
+          </div> 
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <style>
+
+        :root {
+            --green: #1cbd2c;
+            --grey: #c4c4c4;
+            --white: #ffffff;
+            --padding: 1em;
+        }
+        
+        * {
+            padding: 0;
+            border: 0;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        
+        .mainWrapper {
+            width: 100ch;
+            min-width: 40ch;
+            max-width: 75vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .statusBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            width: 100%;
+            position: relative;
+            cursor: default;
+        }
+        
+        .statusBar::before {
+            content: "";
+            height: 0.3em;
+            background-color: var(--grey);
+            position: absolute;
+            left: var(--padding);
+            right: var(--padding);
+        }
+        
+        .pBar {
+            content: "";
+            height: 0.3em;
+            border-radius: 0 0 0.15em 0.15em;
+            background-color: var(--green);
+            max-width: 100%;
+            margin: 10px #000000 solid;
+            position: absolute;
+            left: 0;
+            width: 0%;
+        }
+        
+        .statusBar > .node {
+            background-color: var(--grey);
+            height: 1.2em;
+            width: 1.2em;
+            border-radius: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .node > .text {
+            font-weight: 200;
+            color: var(--grey);
+            text-align: center;
+            position: absolute;
+            top: 2.5em;
+            cursor: ;
+        }
+        
+        .node.done {
+            background-color: var(--green);
+        }
+        
+        .node > .text.done {
+            color: var(--green);
+        }
+        
+        .node > .main {
+            position: absolute;
+            border: 0.2em var(--grey) solid;
+            width: 0;
+            height: 0;
+            border-radius: 100%;
+        }
+        
+        .node > .main.done {
+            border: 0.2em var(--green) solid;
+            width: 2em;
+            height: 2em;
+            border-radius: 100%;
+        }
+        
+        .mainWrapper > .buttonHolder {
+            margin-top: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .button {
+            padding: 0.5em;
+            padding-left: 1em;
+            padding-right: 1em;
+            margin: 1em;
+            font-size: 1.3em;
+            border-radius: 1.5em;
+            cursor: pointer;
+        }
+        .button.b-next {
+            background-color: var(--green);
+            color: var(--white);
+        }
+        
+        .button.b-next:hover {
+            box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.2);
+        }
+        
+        .button.disabled,
+        .button.disabled:hover {
+            opacity: 30%;
+            cursor: default;
+        }
+        
+        .button.b-next.disabled:hover {
+            box-shadow: none;
+        }
+        
+        .button.b-back {
+            box-shadow: 0px 0px 0px 0.2em var(--green) inset;
+            background-color: var(--white);
+            color: var(--green);
+        }
+        
+        .made {
+            position: absolute;
+            bottom: 0.7em;
+        }
+        
+        .made > .credit {
+            opacity: 40%;
+            color: #4b4b4b;
+            text-align: center;
+        }
+        
+            </style>
+        
+            <script>
+        
+        var state = 0;
+        var stateMax = 4;
+        
+        function next() {
+            console.log("Next", state);
+            // browser side functions here
+        }
+        
+        function back() {
+            console.log("Back", state);
+            // browser side functions here
+        }
+        
+        $("#next").click(function () {
+            if (state < stateMax) {
+                next();
+        
+                state += 1;
+        
+                // Enables 'back' button if disabled
+                $("#back").removeClass("disabled");
+        
+                // Adds class to make nodes green
+                $(".nConfirm" + state).each(function () {
+                    $(this).addClass("done");
+                });
+        
+                // Progress bar animation
+                var pBar = (state / stateMax) * 100;
+                $(".pBar").css("width", `${pBar}%`);
+        
+                // Disables 'next' button if end of steps
+                if (state == 4) {
+                    $("#next").addClass("disabled");
+                }
+            }
+        });
+        
+        $("#back").click(function () {
+            if (state > 0) {
+                back();
+        
+                // Enables 'next' button if disabled
+                $("#next").removeClass("disabled");
+        
+                // removes class that makes nodes green
+                $(".nConfirm" + state).each(function () {
+                    $(this).removeClass("done");
+                });
+        
+                state -= 1;
+        
+                // Progress bar animation
+                var pBar = (state / stateMax) * 100;
+                $(".pBar").css("width", `${pBar}%`);
+        
+                // Disables 'back' button if end of steps
+                if (state == 0) {
+                    $("#back").addClass("disabled");
+                }
+            }
+        });
+        
+        
+              </script>
+        
+              <br>
+              <br>
+
             
     <!-- Start Checkout -->
     <section class="shop checkout section">
@@ -174,7 +476,7 @@
                                                 <option value="HK">Hong Kong SAR China</option>
                                                 <option value="HU">Hungary</option>
                                                 <option value="IS">Iceland</option>
-                                                <option value="IN">India</option>
+                                                <option value="IN" selected="selected">India</option>
                                                 <option value="ID">Indonesia</option>
                                                 <option value="IR">Iran</option>
                                                 <option value="IQ">Iraq</option>
@@ -225,7 +527,7 @@
                                                 <option value="MM">Myanmar [Burma]</option>
                                                 <option value="NA">Namibia</option>
                                                 <option value="NR">Nauru</option>
-                                                <option value="NP" selected="selected">Nepal</option>
+                                                <option value="NP">Nepal</option>
                                                 <option value="NL">Netherlands</option>
                                                 <option value="AN">Netherlands Antilles</option>
                                                 <option value="NC">New Caledonia</option>
@@ -342,7 +644,7 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="form-group">
-                                            <label>Postal Code</label>
+                                            <label>Pincode</label>
                                             <input type="text" name="post_code" placeholder="" value="{{old('post_code')}}">
                                             @error('post_code')
                                                 <span class='text-danger'>{{$message}}</span>
@@ -358,7 +660,7 @@
                             <div class="order-details">
                                 <!-- Order Widget -->
                                 <div class="single-widget">
-                                    <h2>CART  TOTALS</h2>
+                                    <h2>CART TOTALS</h2>
                                     <div class="content">
                                         <ul>
 										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>₹{{number_format(Helper::totalCartPrice(),2)}}</span></li>
@@ -420,7 +722,7 @@
                                 <div class="single-widget get-button">
                                     <div class="content">
                                         <div class="button">
-                                            <button type="submit" class="btn">proceed to checkout</button>
+                                            <button type="submit" class="btn">proceed to Pay</button>
                                         </div>
                                     </div>
                                 </div>
