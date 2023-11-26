@@ -195,6 +195,7 @@
                                     <div class="col-lg-4 col-md-6 col-12">
                                         <div class="single-product">
                                             <div class="product-img">
+                                                
                                                 <a href="{{route('product-detail',$product->slug)}}">
                                                     @php
                                                         $photo=explode(',',$product->photo);
@@ -216,6 +217,9 @@
                                                 </div>
                                             </div>
                                             <div class="product-content">
+                                                @if(isset($product->brand))
+															<p>Brand: {{ $product->brand->title }}</p>
+														@endif
                                                 <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
@@ -235,6 +239,8 @@
                            
                             <br>
                              <br>
+
+                             
 
 
 

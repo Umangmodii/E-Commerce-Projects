@@ -21,6 +21,77 @@
 				</div>
 			</div>
 		</div>
+
+		<br>
+	
+
+		<center>
+		<div class="container">
+			<a href="http://127.0.0.1:8000/">
+				<div class="banner">
+					<img src="images/ads.png">
+					
+					<div class="panel panel1">
+						
+					</div>
+				   
+					
+				</div>
+				</a>
+			  </body>
+			  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js'></script>
+			</div>
+		</center>
+			
+			  <style>
+			
+			.banner {
+			  position: relative;
+			  white-space:nowrap;
+			  overflow: hidden;
+			  width: 570px;
+			  height: 250px; 
+			  border: 1px solid black;
+			}
+			
+			.panel {
+			
+			  position: absolute;
+			  background: white;
+			}
+			
+			.panel1 {
+				top:-250px;
+			}
+			
+			.panel2, .panel3{
+				opacity:0;
+			}
+			
+			#imageMove2, #imageMove3 {
+				position:absolute;
+				left:-970px;
+			}
+			
+			#textMove2, #textMove3 {
+				position:absolute;
+				right:-970px;
+			}
+			
+			#textMove4 {
+				position:absolute;
+			}
+			
+			#imageTable_1 {
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+			
+			  </style>
+			  
+		
+
 		<!-- End Breadcrumbs -->
 		<form action="{{route('shop.filter')}}" method="POST">
 		@csrf
@@ -239,7 +310,7 @@
 														
 																	<a title="Add to cart" href="{{route('add-to-cart',$product->slug)}}"><button type="button" class="btn btn-primary">Add to cart</button></a>
 																
-												
+																					
 														{{-- <p>{!! html_entity_decode($product->summary) !!}</p> --}}
 														</div>
 														{{-- <p class="des pt-2">{!! html_entity_decode($product->summary) !!}</p>
@@ -265,6 +336,11 @@
 			</section>
 			<!--/ End Product Style 1  -->	
 		</form>
+
+<!-- Ads Banner-->
+
+	
+
 		<!-- Modal -->
 		@if($products)
 			@foreach($products as $key=>$product)

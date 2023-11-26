@@ -45,7 +45,7 @@
     <div class="middle-inner">
         <div class="container">
             <div class="row">
-                <div class="col-lg-2 md-1 col-15">
+                <div class="col-lg-2 md-0 col-15">
                     <!-- Logo -->
                     <div class="logo">
                         @php

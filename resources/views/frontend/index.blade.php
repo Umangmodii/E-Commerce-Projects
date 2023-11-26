@@ -1,6 +1,8 @@
 @extends('frontend.layouts.master')
 @section('title','E-Mart || Home')
 @section('main-content')
+
+
 <!-- Slider Area -->
 @if(count($banners)>0)
     <section id="Gslider" class="carousel slide" data-ride="carousel">
@@ -79,12 +81,12 @@
                 @foreach($category_lists as $cat)
                     @if($cat->is_parent==1)
                         <!-- Single Banner  -->
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-6 col-6">
                             <div class="single-banner">
                                 @if($cat->photo)
                                     <img src="{{$cat->photo}}" alt="{{$cat->photo}}">
                                 @else
-                                    <img src="https://via.placeholder.com/600x370" alt="#">
+                                    <img src="https://placehold.co/600x400" alt="#">
                                 @endif
                                 <div class="content">
                                     <h3>{{$cat->title}}</h3>
@@ -154,6 +156,83 @@
     </div>
 </section>
 
+<center>
+<!-- Ads Banner-->
+<div class="container">
+<a href="http://127.0.0.1:8000/">
+	<div class="banner">
+        
+        <img src="images/ads.png">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h5> E-Mart Advertisement</h5>
+		<div class="panel panel1">
+			
+		</div>
+	   
+	    
+	</div>
+    </a>
+  </body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js'></script>
+</div>
+</center>
+
+  <style>
+
+.banner {
+  position: relative;
+  white-space:nowrap;
+  overflow: hidden;
+  width: 570px;
+  height: 250px; 
+  border: 1px solid black;
+}
+
+.panel {
+
+  position: absolute;
+  background: white;
+}
+
+.panel1 {
+	top:-250px;
+}
+
+.panel2, .panel3{
+	opacity:0;
+}
+
+#imageMove2, #imageMove3 {
+	position:absolute;
+	left:-970px;
+}
+
+#textMove2, #textMove3 {
+	position:absolute;
+	right:-970px;
+}
+
+#textMove4 {
+	position:absolute;
+}
+
+#imageTable_1 {
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+
+  </style>
+
+  
+
+
 <!-- Start Product Area -->
 <div class="product-area section">
         <div class="container">
@@ -172,6 +251,7 @@
                             <ul class="nav nav-tabs filter-tope-group" id="myTab" role="tablist">
                                 @php
                                     $categories=DB::table('categories')->where('status','active')->where('is_parent',1)->get();
+                                    
                                     // dd($categories);
                                 @endphp
                                 @if($categories)
@@ -260,7 +340,7 @@
             @if($featured)
                 @foreach($featured as $data)
                     <!-- Single Banner  -->
-                    <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-lg-6 col-md-6 col-6">
                         <div class="single-banner">
                             @php
                                 $photo=explode(',',$data->photo);
@@ -273,9 +353,10 @@
                         {{-- <p><a href="{{$data->cat_info['title']}}"</a></p> --}}
                         {{-- <h2><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h2> --}}
                         
-                        <h4>{{$data->title}} <br><br>Up to<span> {{$data->discount}}%</span></h4>
+                        <h6>{{$data->title}} <br><br>Up to<span> {{$data->discount}}%</span></h6>
                         <br>
                         <button class="btn btn-primary"> <a href="{{route('product-detail',$data->slug)}}"> Shop Now </a></button>
+                        <br>
                     </div>
                     <!-- /End Single Banner  -->
                 @endforeach
@@ -406,7 +487,7 @@
         <div class="row">
             @if($posts)
                 @foreach($posts as $post)
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-6">
                         <!-- Start Single Blog  -->
                         <div class="shop-single-blog">
                             <img src="{{$post->photo}}" alt="{{$post->photo}}">
@@ -430,7 +511,7 @@
 <section class="shop-services section home">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-6">
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-rocket"></i>
@@ -439,7 +520,7 @@
                 </div>
                 <!-- End Single Service -->
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-6">
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-reload"></i>
@@ -448,7 +529,7 @@
                 </div>
                 <!-- End Single Service -->
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-6">
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-lock"></i>
@@ -457,7 +538,7 @@
                 </div>
                 <!-- End Single Service -->
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-md-6 col-6">
                 <!-- Start Single Service -->
                 <div class="single-service">
                     <i class="ti-tag"></i>
@@ -595,7 +676,7 @@
                                         </form>
                                         {{-- <div class="default-social"> --}}
                                         {{-- <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END --> --}}
-                                        {{-- </div> --}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -623,7 +704,7 @@
         #Gslider .carousel-inner img{
             width: 100% !important;
             height: 50% 
-
+            
             opacity: .8;
         }
 
