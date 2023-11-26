@@ -139,7 +139,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12 no-padding">
-                                    <div class="content">
+                                    <div class="content"> 
                                         <h4 class="title"><a href="{{route('add-to-cart',$product->slug)}}">{{$product->title}}</a></h4>
                                        
                                     </div>
@@ -261,6 +261,7 @@
                                     @foreach($categories as $key=>$cat)
 
                                     <button class="btn" style="background:none;color:black;"data-filter=".{{$cat->id}}">
+                                        
                                         {{$cat->title}}
                                     </button>
                                     @endforeach
@@ -275,6 +276,9 @@
                                 <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item {{$product->cat_id}}">
                                     <div class="single-product">
                                         <div class="product-img">
+                                            @if(isset($product->brand))
+															<p>Brand: {{ $product->brand->title }}</p>
+														@endif
                                             <a href="{{route('product-detail',$product->slug)}}">
                                                 @php
                                                     $photo=explode(',',$product->photo);
@@ -305,13 +309,15 @@
                                             </div>
                                         </div>
                                         <div class="product-content">
+                                            
                                             <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
+                                            
                                             <div class="product-price">
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
                                                 <span>₹{{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;">₹{{number_format($product->price,2)}}</del>
+                                                <del>₹{{number_format($product->price,2)}}</del>
                                             </div>
                                         </div>
                                     </div>
