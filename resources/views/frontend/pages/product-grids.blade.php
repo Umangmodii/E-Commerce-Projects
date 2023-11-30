@@ -34,12 +34,12 @@
     <form action="{{route('shop.filter')}}" method="POST">
         @csrf
         <section class="product-area shop-sidebar shop section">
-            <div class="container">
+            
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-12">
                         <div class="shop-sidebar">
                                 <!-- Single Widget -->
-                                <div class="single-widget category">
+                                <div class="single-widget category md-4">
                                     <h3 class="title">Categories</h3>
                                     <ul class="categor-list">
 										@php
@@ -73,7 +73,7 @@
                                 <!--/ End Single Widget -->
                                 <!-- Shop By Price -->
                                     <div class="single-widget range">
-                                        <h3 class="title">Shop by Price</h3>
+                                        <h3 class="title">Price</h3>
                                         <div class="price-filter">
                                             <div class="price-filter-inner">
                                                 @php
@@ -84,7 +84,7 @@
                                                 <div class="product_filter">
                                                 <button type="submit" class="filter_button">Filter</button>
                                                 <div class="label-input">
-                                                    <span>Range:</span>
+                                                    <span>Select Range:</span>
                                                     <input style="" type="text" id="amount" readonly/>
                                                     <input type="hidden" name="price_range" id="price_range" value="@if(!empty($_GET['price'])){{$_GET['price']}}@endif"/>
                                                 </div>
@@ -128,7 +128,10 @@
                                                 @php
                                                     $org=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <p class="price"><del class="text-muted">₹{{number_format($product->price,2)}}</del>   ₹{{number_format($org,2)}}  </p>
+                                               
+                                                    
+                                                    <del class="text-muted">₹{{number_format($product->price,2)}}</del> 
+                                                    <p class="price text-danger">  ₹{{number_format($org,2)}}  </p>
 
                                             </div>
                                         </div>
@@ -228,10 +231,8 @@
                                                 @php
                                                     $after_discount=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-													<path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/></svg>{{number_format($after_discount,2)}}</span>
-                                                <del style="padding-left:4%;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-													<path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/></svg>{{number_format($product->price,2)}}</del>
+                                                <span class="text-danger">₹{{number_format($after_discount,2)}}</span>
+                                                <del style="padding-left:4%;">₹{{number_format($product->price,2)}}</del>
                                             </div>
                                         </div>
                                     </div>
@@ -253,17 +254,24 @@
                         <br>
                         <br>
                         
+                        <center>
 
                         <div class="row center">
                             <div class="col-md-12 justify-content-center d-flex">
                                 {{$products->appends($_GET)->links()}}
                                 <br>
                             </div>
-                          </div>
+                          </div> 
+
+                        </center>
+
+                          
+                        
+
 
                     </div>
                 </div>
-            </div>
+           
         </section>
     </form>
 
@@ -335,12 +343,18 @@
                                             @php
                                                 $after_discount=($product->price-($product->price*$product->discount)/100);
                                             @endphp
-                                            <h3><small><del class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                            {{-- <h3><small><del class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
                                                 <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
                                               </svg>{{number_format($product->price,2)}}</del></small>
+
                                               <span> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
                                                 <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
-                                              </svg>{{number_format($after_discount,2)}}  </h3>
+                                              </svg>{{number_format($after_discount,2)}}  </h3> --}}
+
+                                             
+                                              List Price :<span class="text-danger">₹{{number_format($after_discount,2)}}</span><span><br>
+                                              M.R.P :<del>₹{{number_format($product->price,2)}}</del>
+                                              
                                             <div class="quickview-peragraph">
                                                 <p>{!! html_entity_decode($product->summary) !!}</p>
                                             </div>
@@ -408,8 +422,7 @@
                                                     <a href="{{route('add-to-wishlist',$product->slug)}}" class="btn min"><i class="ti-heart"></i></a>
                                                 </div>
                                             </form>
-                                            <div class="default-social">
-                                            <!-- ShareThis BEGIN --><div class="sharethis-inline-share-buttons"></div><!-- ShareThis END -->
+                                         
                                             </div>
                                         </div>
                                     </div>
@@ -417,6 +430,8 @@
                             </div>
                         </div>
                     </div>
+            
+                </div>
             </div>
         @endforeach
     @endif

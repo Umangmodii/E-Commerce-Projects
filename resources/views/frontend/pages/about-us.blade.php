@@ -11,7 +11,7 @@
 				<div class="col-12">
 					<div class="bread-inner">
 						<ul class="bread-list">
-							<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+							<li><a href="index1.html">Home</a></li> >
 							<li class="active"><a href="blog-single.html">About Us</a></li>
 						</ul>
 					</div>
@@ -56,7 +56,7 @@
 	<section class="shop-services section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6 col-12">
+				<div class="col-lg-3 col-md-6 col-6">
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-rocket"></i>
@@ -65,7 +65,7 @@
 					</div>
 					<!-- End Single Service -->
 				</div>
-				<div class="col-lg-3 col-md-6 col-12">
+				<div class="col-lg-3 col-md-6 col-6">
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-reload"></i>
@@ -74,7 +74,7 @@
 					</div>
 					<!-- End Single Service -->
 				</div>
-				<div class="col-lg-3 col-md-6 col-12">
+				<div class="col-lg-3 col-md-6 col-6">
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-lock"></i>
@@ -83,7 +83,7 @@
 					</div>
 					<!-- End Single Service -->
 				</div>
-				<div class="col-lg-3 col-md-6 col-12">
+				<div class="col-lg-3 col-md-6 col-6">
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-tag"></i>

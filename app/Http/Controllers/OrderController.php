@@ -272,13 +272,27 @@ class OrderController extends Controller
     // PDF generate
     public function pdf(Request $request)
     {
-        $order=Order::getAllOrder($request->id);
+        $order=Order::findOrFail($request->id);
      /// return $order;
         $file_name=$order->order_number.'-'.$order->first_name.'.pdf';
         // return $file_name;
-         $pdf=PDF::loadview('backend.order.pdf',compact('order'));
+
+        $data  = ['order' => $order];
+
+     $pdf=PDF::loadview('backend.order.pdf',$data);
         return $pdf->download($file_name);
     }
+
+
+
+    // public function generatePdf()
+    // {
+    //     $data = ['example' => 'data'];
+
+    //     $pdf = PDF::loadView('order.data', $data);
+
+    //     return $pdf->download('order.data.pdf');
+    // }  
 
     // function ($errno, $errstr, $errfile, $errline) 
     // {

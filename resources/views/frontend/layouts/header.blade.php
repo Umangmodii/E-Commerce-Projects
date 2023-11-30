@@ -127,7 +127,7 @@
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Total</span>
-                                            <span class="total-amount">{{number_format(Helper::totalWishlistPrice(),2)}}</span>
+                                            <span class="total-amount">₹{{number_format(Helper::totalWishlistPrice(),2)}}</span>
                                         </div>
                                         <a href="{{route('cart')}}" class="btn animate">Cart</a>
                                     </div>
@@ -164,7 +164,7 @@
                                     <div class="bottom">
                                         <div class="total">
                                             <span>Total</span>
-                                            <span class="total-amount">{{number_format(Helper::totalCartPrice(),2)}}</span>
+                                            <span class="total-amount">₹{{number_format(Helper::totalCartPrice(),2)}}</span>
                                         </div>
                                         <a href="{{route('checkout')}}" class="btn animate">Checkout</a>
                                     </div>

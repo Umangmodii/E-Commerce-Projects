@@ -1,11 +1,14 @@
 @extends('backend.layouts.master')
 
-@section('title','Order Detail')
+@section('title','Orders Detail')
 
 @section('main-content')
 <div class="card">
-<h5 class="card-header">Order       <a href="{{route('order.pdf',$order->id)}}" class=" btn btn-sm btn-primary shadow-sm float-right"><i class="fas fa-download fa-sm text-white-50"></i> Generate PDF</a>
-  </h5>
+ <h5 class="card-header">Order   <a href="{{route('order.pdf',$order->id)}}" class=" btn btn-sm btn-primary shadow-sm float-right"><i class="fas fa-download fa-sm text-white-50"></i> Generate PDF</a> 
+ </h5>
+
+
+  
   <div class="card-body">
     @if($order)
     <table class="table table-striped table-hover">
@@ -93,7 +96,7 @@
                     </tr>
                     <tr>
                         <td>Payment Method</td>
-                        <td> : @if($order->payment_method=='cod') Cash on Delivery @else Paypal @endif</td>
+                        <td> : @if($order->payment_method=='cod') Cash on Delivery @else Rajor Pay @endif</td>
                     </tr>
                     <tr>
                         <td>Payment Status</td>
@@ -141,6 +144,7 @@
 
   </div>
 </div>
+
 @endsection
 
 @push('styles')

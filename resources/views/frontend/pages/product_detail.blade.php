@@ -97,7 +97,7 @@
                                                 @php 
                                                     $after_discount=($product_detail->price-(($product_detail->price*$product_detail->discount)/100));
                                                 @endphp
-												<p class="price"><span class="discount">₹{{number_format($after_discount,2)}}</span>M.R.P :<s>₹{{number_format($product_detail->price,2)}}</s> </p>
+												<p class="price"><span class="discount text-danger">₹{{number_format($after_discount,2)}}</span>M.R.P :<s>₹{{number_format($product_detail->price,2)}}</s> </p>
 												<p class="description">{!!($product_detail->summary)!!}</p>
 											</div>
 											

@@ -17,6 +17,11 @@
     use App\Http\Controllers\HomeController;
     use \UniSharp\LaravelFilemanager\Lfm;
 
+    use App\Http\Controllers\viewController;
+
+    Route::get('/generate-pdf', [viewController::class, 'generatePdf'])->name('generate.pdf');
+    
+
     /*
     |--------------------------------------------------------------------------
     | Web Routes

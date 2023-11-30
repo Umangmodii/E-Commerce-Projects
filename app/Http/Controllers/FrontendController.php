@@ -20,6 +20,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use api;
 
+
 class FrontendController extends Controller
 {
    
@@ -229,7 +230,7 @@ class FrontendController extends Controller
     public function productCat(Request $request){
         $products=Category::getProductByCat($request->slug);
         // return $request->slug;
-        $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(3)->get();
+        $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(5)->get();
 
         if(request()->is('e-shop.loc/product-grids')){
             return view('frontend.pages.product-grids')->with('products',$products->products)->with('recent_products',$recent_products);
@@ -242,7 +243,7 @@ class FrontendController extends Controller
     public function productSubCat(Request $request){
         $products=Category::getProductBySubCat($request->sub_slug);
         // return $products;
-        $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(3)->get();
+        $recent_products=Product::where('status','active')->orderBy('id','DESC')->limit(5)->get();
 
         if(request()->is('e-shop.loc/product-grids')){
             return view('frontend.pages.product-grids')->with('products',$products->sub_products)->with('recent_products',$recent_products);
@@ -361,7 +362,7 @@ class FrontendController extends Controller
             return redirect()->route('home');
         }
         else{
-            request()->session()->flash('error','Invalid email and password pleas try again!');
+            request()->session()->flash('error','Invalid email and password please try again!');
             return redirect()->back();
         }
     }

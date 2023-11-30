@@ -25,79 +25,13 @@
 		<br>
 	
 
-		<center>
-		<div class="container">
-			<a href="http://127.0.0.1:8000/">
-				<div class="banner">
-					<img src="images/ads.png">
-					
-					<div class="panel panel1">
-						
-					</div>
-				   
-					
-				</div>
-				</a>
-			  </body>
-			  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js'></script>
-			</div>
-		</center>
-			
-			  <style>
-			
-			.banner {
-			  position: relative;
-			  white-space:nowrap;
-			  overflow: hidden;
-			  width: 570px;
-			  height: 250px; 
-			  border: 1px solid black;
-			}
-			
-			.panel {
-			
-			  position: absolute;
-			  background: white;
-			}
-			
-			.panel1 {
-				top:-250px;
-			}
-			
-			.panel2, .panel3{
-				opacity:0;
-			}
-			
-			#imageMove2, #imageMove3 {
-				position:absolute;
-				left:-970px;
-			}
-			
-			#textMove2, #textMove3 {
-				position:absolute;
-				right:-970px;
-			}
-			
-			#textMove4 {
-				position:absolute;
-			}
-			
-			#imageTable_1 {
-				position:absolute;
-				left:0px;
-				top:0px;
-			}
-			
-			  </style>
-			  
-		
 
 		<!-- End Breadcrumbs -->
 		<form action="{{route('shop.filter')}}" method="POST">
 		@csrf
 			<!-- Product Style 1 -->
 			<section class="product-area shop-sidebar shop-list shop section">
-				<div class="container">
+				{{-- <div class="container"> --}}
 					<div class="row">
 						<div class="col-lg-3 col-md-4 col-12">
 							<div class="shop-sidebar">
@@ -192,11 +126,7 @@
                                                 @php
                                                     $org=($product->price-($product->price*$product->discount)/100);
                                                 @endphp
-                                                <p class="price"><del class="text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-													<path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
-												  </svg>{{number_format($product->price,2)}}</del>   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-													<path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
-												  </svg>{{number_format($org,2)}}  </p>                                                
+                                                <p class="price"><del class="text-muted">₹{{number_format($product->price,2)}}</del> ₹{{number_format($org,2)}}  </p>                                                
                                             </div>
                                         </div>
                                         <!-- End Single Post -->
@@ -206,7 +136,7 @@
                                 <!-- Single Widget -->
                                 <div class="single-widget category">
                                     <h3 class="title">Brands</h3>
-                                    <ul class="categor-list">
+                                    <ul class="category-list">
                                         @php
                                             $brands=DB::table('brands')->orderBy('title','ASC')->where('status','active')->get();
                                         @endphp
@@ -297,12 +227,10 @@
 																@php
 																	$after_discount=($product->price-($product->price*$product->discount)/100);
 																@endphp
-															Starts From <i class="fa fa-rupee">{{number_format($after_discount,2)}}</i> 
-															  <br>
-															  List Price<del><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-																	<path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4v1.06Z"/>
-																  </svg>{{number_format($product->price,2)}}</del>
-															</div>
+<br>
+
+List Price :<span class="text-danger">₹{{number_format($after_discount,2)}}</span>
+	M.R.P :<del>₹{{number_format($product->price,2)}}</del>
 															
 															
 
@@ -332,7 +260,7 @@
                           </div>
 						</div>
 					</div>
-				</div>
+			
 			</section>
 			<!--/ End Product Style 1  -->	
 		</form>
